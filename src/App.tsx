@@ -1,5 +1,5 @@
 import './App.css'
-import {Box, Grid, GridItem, Stack, Wrap, Image, VStack, Card, Flex, Text, Button, extendTheme} from '@chakra-ui/react'
+import {Box, Grid, GridItem, Stack, Image, VStack, Flex, Text, Button} from '@chakra-ui/react'
 
 
 
