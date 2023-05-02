@@ -3,6 +3,8 @@ import {Box, Grid, GridItem, Stack, Image, VStack, Flex, Text, Button} from '@ch
 
 // images
 import logo from './assets/logo_aecom.png'
+import future from './assets/small_future.png'
+import carbon from './assets/small_carbon.png'
 
 // components
 import CardItem from './Components/CardItem'
@@ -31,12 +33,14 @@ function App() {
 ];
   const props2 = [
     { 
-    imageUrl: 'http://via.placeholder.com/640x360',
-    alt:'random alt text'
+    imageUrl: './small_carbon.png',
+    alt:'Carbon Capture for Utilization and storage',
+    link: 'https://indd.adobe.com/view/71a3aa91-2100-4703-827c-15a988fed0be'
     },
     { 
-    imageUrl: 'http://via.placeholder.com/640x360',
-    alt:'random alt text'
+    imageUrl: './small_future.png',
+    alt:'low carbon future',
+    link:'https://indd.adobe.com/view/bf8b65b5-b3ca-46bb-bf90-92e02963afc3'
     },
 
   ];
@@ -76,8 +80,8 @@ function App() {
           </Flex>
         </GridItem>
         <GridItem p='2' bg='transparent' area={'sidebar'}>
-          <VStack align="stretch">
-            <Text fontSize="3xl" fontWeight="light"       
+          <VStack align="stretch" ml='4'>
+            <Text fontSize="3xl" fontWeight="light"        
             css={{
             WebkitTextStroke: "1px white",
             textStroke: "1px white",

@@ -5,7 +5,7 @@ interface CardItemProps {
   text?: string | null;
   imageUrl: string;
   alt: string;
-  link?: string | null;
+  link: string;
 }
 
 const CardItem: React.FC<CardItemProps> = ({ title, text, imageUrl, alt, link }) => {
@@ -37,13 +37,16 @@ const CardItem: React.FC<CardItemProps> = ({ title, text, imageUrl, alt, link })
       </CardBody>
     </Card>
     :
-    <Image
-      src={imageUrl}
-      alt={alt}
-      borderRadius='lg'
-      w='325px'
-      h='auto'
-  />}
+    <Link href={link} isExternal>
+      <Image
+        src={imageUrl}
+        alt={alt}
+        borderRadius='lg'
+        w='325px'
+        h='auto'
+        />
+    </Link>
+      }
 
   </>
   )
