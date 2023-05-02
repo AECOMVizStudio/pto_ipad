@@ -1,36 +1,51 @@
-import { Card, CardBody, Heading, Stack, Image, Text } from '@chakra-ui/react'
+import { Card, CardBody, Heading, Stack, Image, Text, Link } from '@chakra-ui/react'
 
 interface CardItemProps {
   title?: string | null;
   text?: string | null;
   imageUrl: string;
+  alt: string;
+  link?: string | null;
 }
 
-const CardItem: React.FC<CardItemProps> = ({ title, text, imageUrl }) => {
+const CardItem: React.FC<CardItemProps> = ({ title, text, imageUrl, alt, link }) => {
   // make the card dynamic based on the props it gets.
-  // if there is no Text, center the Title
+  // if there is no Text, but there is an image, center the Title vertically
+  // if there is no Title, render only an Image element instead of a Card
   return (
-  <Card w='250px' bg="transparent" border="none" boxShadow = "none">
-    <CardBody>
-      <Image
-        src={imageUrl}
-        alt='brochure'
-        borderRadius='lg'
-      />
-      <Stack spacing='3' bg="white" p="2" borderRadius='10'>
-        <Heading size='md'>{title}</Heading>
-        <Text>
-          {text}
-        </Text>
-        {text && 
-          <Text>
-            Download Brochure
-          </Text>
-          }
+    <>
+    {title ? 
+      <Card w='290px' bg="transparent" border="none" boxShadow = "none">
+      <CardBody>
+        <Image
+          src={imageUrl}
+          alt='brochure'
+          borderRadius='lg'
+          borderBottomRadius={0}
+        />
+        <Stack spacing='3' bg="white" opacity='0.9' p="2" borderRadius='lg' borderTopRadius={0}>
+          <Heading size='md'>{title}</Heading>
+          <Text fontWeight='medium'>
+            {text}
+          </Text> 
+            {link && 
+              <Link size='sm' href={link} isExternal textTransform='uppercase'>
+                Download Brochure
+              </Link>
+            }
+        </Stack>
+      </CardBody>
+    </Card>
+    :
+    <Image
+      src={imageUrl}
+      alt={alt}
+      borderRadius='lg'
+      w='325px'
+      h='auto'
+  />}
 
-      </Stack>
-    </CardBody>
-  </Card>
+  </>
   )
 }
 

@@ -10,21 +10,36 @@ import CardItem from './Components/CardItem'
 function App() {
   const props1 = [
     { 
-    imageUrl: 'http://via.placeholder.com/640x360' 
+      title: 'Laboratory and Analytical Services', 
+      imageUrl: 'http://via.placeholder.com/640x360',
+      alt:'random alt text',
+      link: 'https://www.aecomprocesstechnologies.com/wp-content/uploads/2016/08/AECOM-Process-Technologies-Laboratory-and-Analytical-Services.pdf'
     },
     {
     title: 'Process Development', 
     text: 'Life Cycle R&D Services from Concept Through Commercial Operation', 
-    imageUrl: 'http://via.placeholder.com/640x360' 
+    imageUrl: 'http://via.placeholder.com/640x360' ,
+    alt:'random alt text',
+    link:'https://www.aecom.com/wp-content/uploads/2019/07/13_Process-Development-Brochure-Aug-2018.pdf'
     },
     {
-    title: 'Laboratory and Analytical Services', 
-    imageUrl: 'http://via.placeholder.com/640x360' 
+    title: 'EPC Services', 
+    imageUrl: 'http://via.placeholder.com/640x360',
+    alt:'random alt text',
+    link:'https://aecomprocesstechnologies.com/wp-content/uploads/2018/01/PTO-EPC-Services_singles.pdf'
     },
 ];
-  const props2 = { 
-    imageUrl: 'http://via.placeholder.com/640x360' 
-  };
+  const props2 = [
+    { 
+    imageUrl: 'http://via.placeholder.com/640x360',
+    alt:'random alt text'
+    },
+    { 
+    imageUrl: 'http://via.placeholder.com/640x360',
+    alt:'random alt text'
+    },
+
+  ];
 
 
   return (
@@ -43,7 +58,7 @@ function App() {
                         "sidebar main"
                         "sidebar main"`}
         gridTemplateRows={'150px 1fr 30px'}
-        gridTemplateColumns={'250px 1fr'}
+        gridTemplateColumns={'225px 1fr'}
         h='100vh'
         gap='3'
         color='blackAlpha.700'
@@ -77,16 +92,15 @@ function App() {
             </Button>
           </VStack>
         </GridItem>
-        <GridItem pl='2' bg='transparent' area={'main'}>
-            <Stack direction={'row'} justify='center' wrap='wrap' mt='2' p='2' spacing='25px'>
-
+        <GridItem bg='transparent' area={'main'}>
+            <Stack direction={'row'} justify='center' wrap='wrap'>
                   <CardItem {...props1[0]}/>
                   <CardItem {...props1[1]}/>
                   <CardItem {...props1[2]}/>
             </Stack>
-            <Stack direction={'row'} justify='center' wrap='wrap' mt='2' p='2' spacing='25px'>
-                  <CardItem {...props2}/>
-                  <CardItem {...props2}/>
+            <Stack direction={'row'} justify='center' wrap='wrap' mt='2'>
+                  <CardItem {...props2[0]}/>
+                  <CardItem {...props2[1]}/>
             </Stack>
           {/* <HStack>
             <CardItem />
