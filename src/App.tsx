@@ -3,8 +3,6 @@ import {Box, Grid, GridItem, Stack, Image, VStack, Flex, Text, Button} from '@ch
 
 // images
 import logo from './assets/logo_aecom.png'
-import future from './assets/small_future.png'
-import carbon from './assets/small_carbon.png'
 
 // components
 import CardItem from './Components/CardItem'
