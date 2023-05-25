@@ -1,5 +1,5 @@
 import './App.css'
-import {Box, Grid, GridItem, Stack, Image, VStack, Flex, Text, Button} from '@chakra-ui/react'
+import {Box, Grid, GridItem, Stack, Image, VStack, Flex, Text, Button, Link} from '@chakra-ui/react'
 
 // images
 import logo from './assets/logo_aecom.png'
@@ -8,6 +8,7 @@ import logo from './assets/logo_aecom.png'
 import CardItem from './Components/CardItem'
 
 function App() {
+  const contact = 'scott.d.miller@aecom.com'
   const props1 = [
     { 
       title: 'Laboratory and Analytical Services', 
@@ -86,12 +87,16 @@ function App() {
             }}>
               Delivering a better world by helping clients operate, maintain, and expand assets in a sustainable manner.
             </Text>
-            <Button colorScheme='teal' variant='solid'>
-              Learn More
-            </Button>
-            <Button colorScheme='teal' bg="white" color="teal" variant='solid'>
-              Contact Us
-            </Button>
+            <Link href = 'https://aecom.com/services/process-technologies/' target='_blank' width='100%'>
+              <Button width="100%" colorScheme='teal' variant='solid'>
+                Learn More
+              </Button>
+            </Link>
+            <Link href = {`mailto:${contact}`} width='100%'>
+              <Button width="100%" colorScheme='white' bg="white" color="teal" variant='solid'>
+                Contact Us
+              </Button>
+            </Link>
           </VStack>
         </GridItem>
         <GridItem bg='transparent' area={'main'}>
