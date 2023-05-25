@@ -11,20 +11,20 @@ function App() {
   const props1 = [
     { 
       title: 'Laboratory and Analytical Services', 
-      imageUrl: 'http://via.placeholder.com/640x360',
-      alt:'random alt text',
+      imageUrl: '',
+      alt:'lab_service_sm.webp',
       link: 'https://www.aecomprocesstechnologies.com/wp-content/uploads/2016/08/AECOM-Process-Technologies-Laboratory-and-Analytical-Services.pdf'
     },
     {
     title: 'Process Development', 
     text: 'Life Cycle R&D Services from Concept Through Commercial Operation', 
-    imageUrl: 'http://via.placeholder.com/640x360' ,
+    imageUrl: './process_dev_sm.webp' ,
     alt:'random alt text',
     link:'https://www.aecom.com/wp-content/uploads/2019/07/13_Process-Development-Brochure-Aug-2018.pdf'
     },
     {
     title: 'EPC Services', 
-    imageUrl: 'http://via.placeholder.com/640x360',
+    imageUrl: 'EPC_sm.webp',
     alt:'random alt text',
     link:'https://aecomprocesstechnologies.com/wp-content/uploads/2018/01/PTO-EPC-Services_singles.pdf'
     },
