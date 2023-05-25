@@ -11,7 +11,7 @@ function App() {
   const props1 = [
     { 
       title: 'Laboratory and Analytical Services', 
-      imageUrl: '',
+      imageUrl: './lab_service_sm.webp',
       alt:'lab_service_sm.webp',
       link: 'https://www.aecomprocesstechnologies.com/wp-content/uploads/2016/08/AECOM-Process-Technologies-Laboratory-and-Analytical-Services.pdf'
     },
@@ -24,7 +24,7 @@ function App() {
     },
     {
     title: 'EPC Services', 
-    imageUrl: 'EPC_sm.webp',
+    imageUrl: './EPC_sm.webp',
     alt:'random alt text',
     link:'https://aecomprocesstechnologies.com/wp-content/uploads/2018/01/PTO-EPC-Services_singles.pdf'
     },
