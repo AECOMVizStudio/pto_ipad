@@ -20,7 +20,7 @@ const CardItem: React.FC<CardItemProps> = ({ title, text, imageUrl, alt, link })
         <Link href = {link} target="_blank">
           <Image
             src={imageUrl}
-            alt='brochure'
+            alt={alt}
             borderRadius='lg'
             // borderBottomRadius={0}
             />
