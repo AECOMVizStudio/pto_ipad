@@ -17,12 +17,14 @@ const CardItem: React.FC<CardItemProps> = ({ title, text, imageUrl, alt, link })
     {title ? 
       <Card w='290px' bg="transparent" border="none" boxShadow = "none">
       <CardBody>
-        <Image
-          src={imageUrl}
-          alt='brochure'
-          borderRadius='lg'
-          // borderBottomRadius={0}
-        />
+        <Link href = {link} target="_blank">
+          <Image
+            src={imageUrl}
+            alt='brochure'
+            borderRadius='lg'
+            // borderBottomRadius={0}
+            />
+        </Link>
         <Stack bg="transparent" opacity='0.9' p="2" borderRadius='lg' borderTopRadius={0}>
           {/* <Heading size='md'>{title}</Heading> */}
           {/* <Text fontWeight='medium'>
