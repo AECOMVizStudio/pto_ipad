@@ -48,7 +48,7 @@ function App() {
   return (
     <>
     <Box
-      bgImage="url('https://images.unsplash.com/photo-1508791290064-c27cc1ef7a9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80')"
+      bgImage="url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80')"
       backgroundSize="cover"
       backgroundPosition="center"
       height="100vh"
