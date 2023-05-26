@@ -21,18 +21,18 @@ const CardItem: React.FC<CardItemProps> = ({ title, text, imageUrl, alt, link })
           src={imageUrl}
           alt='brochure'
           borderRadius='lg'
-          borderBottomRadius={0}
+          // borderBottomRadius={0}
         />
-        <Stack spacing='3' bg="white" opacity='0.9' p="2" borderRadius='lg' borderTopRadius={0}>
-          <Heading size='md'>{title}</Heading>
-          <Text fontWeight='medium'>
+        <Stack bg="transparent" opacity='0.9' p="2" borderRadius='lg' borderTopRadius={0}>
+          {/* <Heading size='md'>{title}</Heading> */}
+          {/* <Text fontWeight='medium'>
             {text}
           </Text> 
             {link && 
               <Link size='sm' href={link} isExternal textTransform='uppercase'>
                 Download Brochure
               </Link>
-            }
+            } */}
         </Stack>
       </CardBody>
     </Card>
@@ -42,7 +42,7 @@ const CardItem: React.FC<CardItemProps> = ({ title, text, imageUrl, alt, link })
         src={imageUrl}
         alt={alt}
         borderRadius='lg'
-        w='325px'
+        w='250px'
         h='auto'
         />
     </Link>

@@ -100,15 +100,18 @@ function App() {
           </VStack>
         </GridItem>
         <GridItem bg='transparent' area={'main'}>
+            
             <Stack direction={'row'} justify='center' wrap='wrap'>
                   <CardItem {...props1[0]}/>
                   <CardItem {...props1[1]}/>
                   <CardItem {...props1[2]}/>
             </Stack>
-            <Stack direction={'row'} justify='center' wrap='wrap' mt='2'>
+          <div style = {{margin: "80px 0"}}>
+            <Stack direction={'row'} justify='center' wrap='wrap' mt='2' spacing={12}>
                   <CardItem {...props2[0]}/>
                   <CardItem {...props2[1]}/>
             </Stack>
+          </div>
           {/* <HStack>
             <CardItem />
             <CardItem />
