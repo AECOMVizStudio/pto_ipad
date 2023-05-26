@@ -78,8 +78,19 @@ function App() {
             <Image src={logo} alt="aecom logo" w="150px"/>
           </Flex>
         </GridItem>
-        <GridItem p='2' bg='transparent' area={'sidebar'}>
-          <VStack align="stretch" ml='4'>
+        <GridItem 
+          area={'sidebar'} 
+          bg="rgba(0, 0, 0, 0.5)" 
+          backdropFilter="blur(10px)"
+          boxShadow="lg"
+          borderRadius="lg"
+          maxWidth="auto"
+          height="fit-content"
+          py={6}
+          px={2}
+          mx={1}
+          >
+          <VStack align="stretch" ml='1'>
             <Text fontSize="3xl" fontWeight="light"        
             css={{
             WebkitTextStroke: "1px white",
@@ -106,7 +117,7 @@ function App() {
                   <CardItem {...props1[1]}/>
                   <CardItem {...props1[2]}/>
             </Stack>
-          <div style = {{margin: "80px 0"}}>
+          <div style = {{margin: "8em 0"}}>
             <Stack direction={'row'} justify='center' wrap='wrap' mt='2' spacing={12}>
                   <CardItem {...props2[0]}/>
                   <CardItem {...props2[1]}/>
