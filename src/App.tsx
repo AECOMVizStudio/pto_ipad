@@ -13,20 +13,20 @@ function App() {
     { 
       title: 'Laboratory and Analytical Services', 
       imageUrl: './lab_service_sm.webp',
-      alt:'lab_service_sm.webp',
+      alt:'Laboratory and Analytical Services',
       link: 'https://www.aecomprocesstechnologies.com/wp-content/uploads/2016/08/AECOM-Process-Technologies-Laboratory-and-Analytical-Services.pdf'
     },
     {
     title: 'Process Development', 
     text: 'Life Cycle R&D Services from Concept Through Commercial Operation', 
     imageUrl: './process_dev_sm.webp' ,
-    alt:'random alt text',
+    alt:'process development life cycle R&D',
     link:'https://www.aecom.com/wp-content/uploads/2019/07/13_Process-Development-Brochure-Aug-2018.pdf'
     },
     {
     title: 'EPC Services', 
     imageUrl: './EPC_sm.webp',
-    alt:'random alt text',
+    alt:'EPC Services, process technologies',
     link:'https://aecomprocesstechnologies.com/wp-content/uploads/2018/01/PTO-EPC-Services_singles.pdf'
     },
 ];
@@ -48,7 +48,7 @@ function App() {
   return (
     <>
     <Box
-      bgImage="url('https://images.unsplash.com/photo-1508791290064-c27cc1ef7a9a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80')"
+      bgImage="url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80')"
       backgroundSize="cover"
       backgroundPosition="center"
       height="100vh"
@@ -78,8 +78,19 @@ function App() {
             <Image src={logo} alt="aecom logo" w="150px"/>
           </Flex>
         </GridItem>
-        <GridItem p='2' bg='transparent' area={'sidebar'}>
-          <VStack align="stretch" ml='4'>
+        <GridItem 
+          area={'sidebar'} 
+          bg="rgba(0, 0, 0, 0.20)" 
+          backdropFilter="blur(10px)"
+          boxShadow="lg"
+          borderRadius="lg"
+          maxWidth="auto"
+          height="fit-content"
+          py={6}
+          px={2}
+          mx={1}
+          >
+          <VStack align="stretch" ml='1'>
             <Text fontSize="3xl" fontWeight="light"        
             css={{
             WebkitTextStroke: "1px white",
@@ -100,15 +111,18 @@ function App() {
           </VStack>
         </GridItem>
         <GridItem bg='transparent' area={'main'}>
+            
             <Stack direction={'row'} justify='center' wrap='wrap'>
                   <CardItem {...props1[0]}/>
                   <CardItem {...props1[1]}/>
                   <CardItem {...props1[2]}/>
             </Stack>
-            <Stack direction={'row'} justify='center' wrap='wrap' mt='2'>
+          <div style = {{margin: "8em 0"}}>
+            <Stack direction={'row'} justify='center' wrap='wrap' mt='2' spacing={12}>
                   <CardItem {...props2[0]}/>
                   <CardItem {...props2[1]}/>
             </Stack>
+          </div>
           {/* <HStack>
             <CardItem />
             <CardItem />
