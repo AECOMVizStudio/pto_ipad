@@ -80,7 +80,7 @@ function App() {
         </GridItem>
         <GridItem 
           area={'sidebar'} 
-          bg="rgba(0, 0, 0, 0.5)" 
+          bg="rgba(0, 0, 0, 0.20)" 
           backdropFilter="blur(10px)"
           boxShadow="lg"
           borderRadius="lg"

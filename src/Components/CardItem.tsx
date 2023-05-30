@@ -1,4 +1,4 @@
-import { Card, CardBody, Heading, Stack, Image, Text, Link } from '@chakra-ui/react'
+import { Card, CardBody, Stack, Image, Link } from '@chakra-ui/react'
 
 interface CardItemProps {
   title?: string | null;
@@ -8,7 +8,7 @@ interface CardItemProps {
   link: string;
 }
 
-const CardItem: React.FC<CardItemProps> = ({ title, text, imageUrl, alt, link }) => {
+const CardItem: React.FC<CardItemProps> = ({ title, imageUrl, alt, link }) => {
   // make the card dynamic based on the props it gets.
   // if there is no Text, but there is an image, center the Title vertically
   // if there is no Title, render only an Image element instead of a Card
