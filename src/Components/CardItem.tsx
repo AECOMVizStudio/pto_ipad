@@ -1,44 +1,20 @@
-import { Card, CardBody, Stack, Image, Link } from '@chakra-ui/react'
+import {Image, Link } from '@chakra-ui/react'
 
+//2732 x 2048
+// 1366 x 1024
 interface CardItemProps {
-  title?: string | null;
-  text?: string | null;
   imageUrl: string;
   alt: string;
   link: string;
 }
 
-const CardItem: React.FC<CardItemProps> = ({ title, imageUrl, alt, link }) => {
+const CardItem: React.FC<CardItemProps> = ({ imageUrl, alt, link }) => {
   // make the card dynamic based on the props it gets.
   // if there is no Text, but there is an image, center the Title vertically
   // if there is no Title, render only an Image element instead of a Card
   return (
     <>
-    {title ? 
-      <Card w='290px' bg="transparent" border="none" boxShadow = "none">
-      <CardBody>
-        <Link href = {link} target="_blank">
-          <Image
-            src={imageUrl}
-            alt={alt}
-            borderRadius='lg'
-            // borderBottomRadius={0}
-            />
-        </Link>
-        <Stack bg="transparent" opacity='0.9' p="2" borderRadius='lg' borderTopRadius={0}>
-          {/* <Heading size='md'>{title}</Heading> */}
-          {/* <Text fontWeight='medium'>
-            {text}
-          </Text> 
-            {link && 
-              <Link size='sm' href={link} isExternal textTransform='uppercase'>
-                Download Brochure
-              </Link>
-            } */}
-        </Stack>
-      </CardBody>
-    </Card>
-    :
+
     <Link href={link} isExternal>
       <Image
         src={imageUrl}
@@ -46,10 +22,12 @@ const CardItem: React.FC<CardItemProps> = ({ title, imageUrl, alt, link }) => {
         borderRadius='lg'
         w='250px'
         h='auto'
+        m='4'
+
+        border='2px solid #ffffff'
         />
     </Link>
-      }
-
+      
   </>
   )
 }
