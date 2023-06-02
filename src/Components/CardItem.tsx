@@ -1,12 +1,14 @@
-import {Image, Link } from '@chakra-ui/react'
+import {Image, Box } from '@chakra-ui/react'
 
-//2732 x 2048
-// 1366 x 1024
+
+//1366 x 894
 interface CardItemProps {
   imageUrl: string;
   alt: string;
   link: string;
 }
+
+
 
 const CardItem: React.FC<CardItemProps> = ({ imageUrl, alt, link }) => {
   // make the card dynamic based on the props it gets.
@@ -15,18 +17,17 @@ const CardItem: React.FC<CardItemProps> = ({ imageUrl, alt, link }) => {
   return (
     <>
 
-    <Link href={link} isExternal>
+    <Box>
       <Image
         src={imageUrl}
         alt={alt}
         borderRadius='lg'
-        w='250px'
+        w='350px'
         h='auto'
         m='4'
-
         border='2px solid #ffffff'
         />
-    </Link>
+    </Box>
       
   </>
   )
