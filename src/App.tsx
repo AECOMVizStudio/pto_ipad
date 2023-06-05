@@ -3,7 +3,7 @@ import {Box, Grid, GridItem, Stack, Image, VStack, Flex, Text, Button, Link} fro
 import {useState} from 'react'
 
 // images
-import logo from './assets/logo_aecom.png'
+import logo from './assets/logo_2.png'
 
 // components
 import CardItem from './Components/CardItem'
@@ -63,8 +63,8 @@ function App() {
           <Flex justify="space-between" alignItems="center" p="4">
             <Text fontSize="3xl" fontWeight="light"       
               css={{
-              WebkitTextStroke: "1px black",
-              textStroke: "1px black",
+              WebkitTextStroke: "1px white",
+              textStroke: "1px white",
               }}>
               Process <br></br>Technologies</Text>
             <Image src={logo} alt="aecom logo" w="150px"/>
