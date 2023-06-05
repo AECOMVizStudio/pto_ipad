@@ -16,12 +16,12 @@ function App() {
     { 
       imageUrl: './small_carbon.png',
       alt:'Carbon Capture for Utilization and storage',
-      link: 'https://indd.adobe.com/view/71a3aa91-2100-4703-827c-15a988fed0be'
+      link: './CC_and_Storage_brochure_digital_v7.pdf'
       },
       {
       imageUrl: './process_dev_sm.webp' ,
       alt:'process development life cycle R&D',
-      link:'https://www.aecom.com/wp-content/uploads/2019/07/13_Process-Development-Brochure-Aug-2018.pdf'
+      link:'./13_Process-Development-Brochure-Aug-2018.pdf'
       },
       { 
         imageUrl: './small_future.png',
@@ -31,7 +31,7 @@ function App() {
       { 
         imageUrl: './lab_service_sm.webp',
         alt:'Laboratory and Analytical Services',
-        link: 'https://www.aecomprocesstechnologies.com/wp-content/uploads/2016/08/AECOM-Process-Technologies-Laboratory-and-Analytical-Services.pdf'
+        link: './AECOM-Process-Technologies-Laboratory-and-Analytical-Services.pdf'
       },
       
       

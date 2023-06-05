@@ -1,4 +1,4 @@
-import {Image, Box } from '@chakra-ui/react'
+import {Image, Box, Link } from '@chakra-ui/react'
 
 
 //1366 x 894
@@ -9,15 +9,15 @@ interface CardItemProps {
 }
 
 
-// const CardItem: React.FC<CardItemProps> = ({ imageUrl, alt, link }) => {
-const CardItem: React.FC<CardItemProps> = ({ imageUrl, alt}) => {
+const CardItem: React.FC<CardItemProps> = ({ imageUrl, alt, link }) => {
+// const CardItem: React.FC<CardItemProps> = ({ imageUrl, alt}) => {
   // make the card dynamic based on the props it gets.
   // if there is no Text, but there is an image, center the Title vertically
   // if there is no Title, render only an Image element instead of a Card
   return (
     <>
-
-    <Box>
+    <Link href={link}>
+      
       <Image
         src={imageUrl}
         alt={alt}
@@ -27,7 +27,8 @@ const CardItem: React.FC<CardItemProps> = ({ imageUrl, alt}) => {
         m='4'
         border='2px solid #ffffff'
         />
-    </Box>
+        
+    </Link>
       
   </>
   )
