@@ -4,6 +4,7 @@ import {useState} from 'react'
 
 // images
 import logo from './assets/logo_2.png'
+import bg from './assets/bg.webp'
 
 // components
 import CardItem from './Components/CardItem'
@@ -40,7 +41,7 @@ function App() {
   return (
     <>
     <Box
-      bgImage="url('https://images.unsplash.com/photo-1592722182837-52273392552d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80')"
+      bgImage={bg}
       backgroundSize="cover"
       backgroundPosition="center"
       height="100%"
