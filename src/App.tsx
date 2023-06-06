@@ -1,5 +1,5 @@
 import './App.css'
-import {Box, Grid, GridItem, Stack, Image, VStack, Flex, Text, Button, Link} from '@chakra-ui/react'
+import {Box, Grid, GridItem, Stack, Image, VStack, Flex, Text, Button} from '@chakra-ui/react'
 import {useState} from 'react'
 
 // images
@@ -10,8 +10,11 @@ import bg from './assets/bg.webp'
 import CardItem from './Components/CardItem'
 
 function App() {
-  const [showQR, setShowQR] = useState(false);
-  const handleToggle = () => {setShowQR(!showQR)}
+  const [showQRLearn, setShowQRLearn] = useState(false);
+  const handleToggle = () => {setShowQRLearn(!showQRLearn), setShowQRContact(false)}
+
+  const [showQRContact, setShowQRContact] = useState(false);
+  const handleContactToggle = () => {setShowQRContact(!showQRContact), setShowQRLearn(false)}
 
   const props1 = [
     { 
@@ -86,8 +89,19 @@ function App() {
           <VStack align="stretch" ml='1'>
           <Box>
 
-          {showQR ?
-            <img src="./qr.png" alt="qr code" style={{ display: "block", width: "200px",  }} />
+
+
+          {showQRLearn ?
+            <>
+              <Text fontSize='3xl' align='center' color='white' my='0'>Learn More</Text>
+              <img src="./qr_learn.png" alt="qr code for learn" style={{ display: "block", width: "200px",  }} />
+            </>
+            :
+            showQRContact ?
+            <>
+            <Text fontSize='3xl' align='center' color='white' my='0'>Contact Us</Text>
+            <img src="./qr_contact.png" alt="qr code for contact" style={{ display: "block", width: "200px",  }} />
+            </>
             :
             <Text fontSize="3xl" fontWeight="light"        
             css={{
@@ -96,20 +110,16 @@ function App() {
             }}>
               Delivering a better world by helping clients operate, maintain, and expand assets in a sustainable manner.
             </Text>
-          }   
-            <Link href = 'https://aecom.com/services/process-technologies/' target='_blank' width='100%'>
-              <Button width="100%" colorScheme='teal' variant='solid' my={2}>
-                Learn More
-              </Button>
-            </Link>
+          }  
 
-            {showQR ? 
-              <Button onClick = {handleToggle} width="100%" colorScheme='white' bg="white" color="teal" variant='solid'>
-                Our Mission
-              </Button>
-            :<Button onClick = {handleToggle} width="100%" colorScheme='white' bg="white" color="teal" variant='solid'>
-              Contact Us
-            </Button>}
+
+
+            <Button onClick = {handleContactToggle} width="100%" colorScheme='teal' variant='solid' my={2}>
+                {showQRContact ? "Our Mission" : "Contact Us"}
+            </Button>
+            <Button onClick = {handleToggle} width="100%" colorScheme='white' bg="white" color="teal" variant='solid'>
+              {showQRLearn ? "Our Mission" : "Learn More"}
+            </Button>
 
           </Box>
           </VStack>
