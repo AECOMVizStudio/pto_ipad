@@ -26,7 +26,7 @@ function App() {
       { 
         imageUrl: './small_future.png',
         alt:'low carbon future',
-        link:'https://indd.adobe.com/view/bf8b65b5-b3ca-46bb-bf90-92e02963afc3'
+        link:'./AECOM_Low Carbon Future.pdf'
       },
       { 
         imageUrl: './lab_service_sm.webp',
