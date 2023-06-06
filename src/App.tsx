@@ -3,7 +3,7 @@ import {Box, Grid, GridItem, Stack, Image, VStack, Flex, Text, Button, Link} fro
 import {useState} from 'react'
 
 // images
-import logo from './assets/logo_aecom.png'
+import logo from './assets/logo_2.png'
 
 // components
 import CardItem from './Components/CardItem'
@@ -16,22 +16,22 @@ function App() {
     { 
       imageUrl: './small_carbon.png',
       alt:'Carbon Capture for Utilization and storage',
-      link: 'https://indd.adobe.com/view/71a3aa91-2100-4703-827c-15a988fed0be'
+      link: './CC_and_Storage_brochure_digital_v7.pdf'
       },
       {
       imageUrl: './process_dev_sm.webp' ,
       alt:'process development life cycle R&D',
-      link:'https://www.aecom.com/wp-content/uploads/2019/07/13_Process-Development-Brochure-Aug-2018.pdf'
+      link:'./13_Process-Development-Brochure-Aug-2018.pdf'
       },
       { 
         imageUrl: './small_future.png',
         alt:'low carbon future',
-        link:'https://indd.adobe.com/view/bf8b65b5-b3ca-46bb-bf90-92e02963afc3'
+        link:'./AECOM_Low Carbon Future.pdf'
       },
       { 
         imageUrl: './lab_service_sm.webp',
         alt:'Laboratory and Analytical Services',
-        link: 'https://www.aecomprocesstechnologies.com/wp-content/uploads/2016/08/AECOM-Process-Technologies-Laboratory-and-Analytical-Services.pdf'
+        link: './AECOM-Process-Technologies-Laboratory-and-Analytical-Services.pdf'
       },
       
       
@@ -63,8 +63,8 @@ function App() {
           <Flex justify="space-between" alignItems="center" p="4">
             <Text fontSize="3xl" fontWeight="light"       
               css={{
-              WebkitTextStroke: "1px black",
-              textStroke: "1px black",
+              WebkitTextStroke: "1px white",
+              textStroke: "1px white",
               }}>
               Process <br></br>Technologies</Text>
             <Image src={logo} alt="aecom logo" w="150px"/>
