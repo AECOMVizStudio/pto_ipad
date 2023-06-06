@@ -1,4 +1,4 @@
-import {Image, Box, Link } from '@chakra-ui/react'
+import {Image, Link } from '@chakra-ui/react'
 
 
 //1366 x 894
