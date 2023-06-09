@@ -16,13 +16,13 @@ const CardItem: React.FC<CardItemProps> = ({ imageUrl, alt, link }) => {
   // if there is no Title, render only an Image element instead of a Card
   return (
     <>
-    <Link href={link}>
+    <Link href={link} target="_blank">
       
       <Image
         src={imageUrl}
         alt={alt}
         borderRadius='lg'
-        w='350px'
+        w='475px'
         h='auto'
         m='4'
         border='2px solid #ffffff'
