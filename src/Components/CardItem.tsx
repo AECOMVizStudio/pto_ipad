@@ -10,10 +10,6 @@ interface CardItemProps {
 
 
 const CardItem: React.FC<CardItemProps> = ({ imageUrl, alt, link }) => {
-// const CardItem: React.FC<CardItemProps> = ({ imageUrl, alt}) => {
-  // make the card dynamic based on the props it gets.
-  // if there is no Text, but there is an image, center the Title vertically
-  // if there is no Title, render only an Image element instead of a Card
   return (
     <>
     <Link href={link} target="_blank">
@@ -22,9 +18,9 @@ const CardItem: React.FC<CardItemProps> = ({ imageUrl, alt, link }) => {
         src={imageUrl}
         alt={alt}
         borderRadius='lg'
-        w='475px'
+        w='370px'
         h='auto'
-        m='4'
+        m='3'
         border='2px solid #ffffff'
         />
         
